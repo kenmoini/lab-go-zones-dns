@@ -1,0 +1,38 @@
+---
+
+- name: Create CaaS Directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+  with_items:
+    - "{{ service_containers_dir }}/{{ service.name }}/"
+    - "{{ service_containers_dir }}/{{ service.name }}/scripts"
+    - "{{ service_containers_dir }}/{{ service.name }}/volumes"
+
+- name: Template CaaS deployment files - servicectl.sh.j2
+  template:
+    src: servicectl.sh.j2
+    dest: "{{ service_containers_dir }}/{{ service.name }}/scripts/servicectl.sh"
+    owner: root
+    group: root
+    mode: 0755
+
+- name: "Template CaaS deployment files - {{ service.name }}.service"
+  template:
+    src: service.j2
+    dest: "/etc/systemd/system/{{ service.name }}.service"
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy over the CaaS configuration
+  copy:
+    src: "site_configs/{{ inventory_hostname }}/{{ service.name }}/{{ item }}/"
+    dest: "{{ service_containers_dir }}/{{ service.name }}/volumes/{{ item }}"
+    owner: root
+    group: root
+  with_items:
+    - etc-config
+    - vendor-config

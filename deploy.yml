@@ -1,0 +1,50 @@
+---
+- name: Deploy the GoZones Container-as-a-Service
+  hosts: all
+  gather_facts: yes
+  become: yes
+  vars:
+    #caas_name: dns-core-1
+
+    # service_containers_dir: Where will the files for this service be stored
+    service_containers_dir: /opt/caas
+
+    container_image: quay.io/kenmoini/go-zones:file-to-bind-latest
+
+    # enable_vendor_overrides: Set to true if you have BIND/named configuration in the vendor-config directory
+    enable_vendor_overrides: false
+
+  tasks:
+
+    - name: Create Service Containers Directory
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: root
+        group: root
+      with_items:
+        - "{{ service_containers_dir }}"
+
+    - name: Pre-pull the image
+      containers.podman.podman_image:
+        name: "{{ container_image }}"
+        pull: yes
+        force: yes
+      #shell: "podman pull {{ container_image }}"
+
+    - name: Run per-service configuration
+      include_tasks: tasks/per-service.yml
+      loop: "{{ gozones_services }}"
+      loop_control:
+        loop_var: service
+
+    - name: Reload systemd
+      ansible.builtin.systemd:
+        daemon_reload: yes
+
+    - name: Start CaaS
+      ansible.builtin.service:
+        name: "{{ item.name }}"
+        state: restarted
+        enabled: yes
+      loop: "{{ gozones_services }}"
