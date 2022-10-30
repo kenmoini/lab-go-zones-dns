@@ -23,7 +23,7 @@ all:
         - name: dns-core-2
           network:
             name: lanBridge
-            ip: 192.168.42.9
+            ip: 192.168.42.10
             port: 53
           resources:
             limits:
