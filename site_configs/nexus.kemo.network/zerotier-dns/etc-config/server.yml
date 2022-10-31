@@ -1,0 +1,50 @@
+# example DNS Server Configuration
+dns:
+  ##########################################################################################
+  # acls is a list of named network groups
+  acls:
+    # privatenets can respond to internal client queries with an internal IP
+    - name: privatenets
+      networks:
+        - 10.0.0.0/8
+        - 172.16.0.0/12
+        - 192.168.0.0/16
+        - localhost
+        - localnets
+    # externalwan would match any external network
+    - name: externalwan
+      networks:
+        - any
+        - "!10.0.0.0/8"
+        - "!172.16.0.0/12"
+        - "!192.168.0.0/16"
+        - "!localhost"
+        - "!localnets"
+
+  ##########################################################################################
+  # views is a list of named views that glue together acls and zones
+  views:
+    - name: internalNetworks
+      # acls is a list of the named ACLs from above that this view will be applied to
+      acls:
+        - privatenets
+      # recursion is a boolean that controls whether this view will allow recursive DNS queries
+      recursion: true
+      # if recursion is true, then you can provide forwarders to be used for recursive queries 
+      #  such as a PiHole DNS server or just something like Cloudflare DNS at 1.0.0.1 and 1.1.1.1
+      forwarders:
+        - 208.67.222.222
+        - 208.67.220.220
+      # forwarded_zones is a list of zones and their authoritative nameservers to forward queries to
+      forwarded_zones:
+        - zone: tosins-lab.com
+          forwarders:
+            - 192.168.1.56
+        - zone: dsal.labs
+          forwarders:
+            - 10.1.241.136
+
+        - zone: kemo.labs
+          forwarders:
+            - 192.168.42.9
+            - 192.168.42.10
