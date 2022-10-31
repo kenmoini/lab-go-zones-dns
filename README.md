@@ -20,7 +20,7 @@ First off, the configuration in this repo is mine which means it's not likely to
 
 1. [Fork this repo](https://github.com/kenmoini/lab-go-zones-dns/fork)
 2. Clone your forked repo to your local machine - `git clone https://github.com/YOUR_USERNAME/lab-go-zones-dns.git`.
-3. If you'll be running the Playbook manually with the CLI then set up your inventory file - see the [inventory.example](inventory.example) file for an example of how to do this.  If you plan on using this with Ansible Tower you can skip creating the inventory file.
+3. If you'll be running the Playbook manually with the CLI then set up your inventory file - see the [example.inventory](example.inventory) file for an example of how to do this.  If you plan on using this with Ansible Tower you can skip creating the inventory file.
 4. 
 
 ## Setting Up Ansible Tower for GitOps-y goodness
