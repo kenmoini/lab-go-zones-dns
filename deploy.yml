@@ -1,11 +1,9 @@
 ---
 - name: Deploy the GoZones Container-as-a-Service
   hosts: all
-  gather_facts: yes
-  become: yes
+  gather_facts: true
+  become: true
   vars:
-    #caas_name: dns-core-1
-
     # service_containers_dir: Where will the files for this service be stored
     service_containers_dir: /opt/caas
 
