@@ -27,12 +27,17 @@
     group: root
     mode: 0755
 
-- name: Copy over the CaaS configuration
+- name: Copy over the CaaS configuration - etc-config
   ansible.builtin.copy:
-    src: "site_configs/{{ inventory_hostname }}/{{ service.name }}/{{ item }}/"
-    dest: "{{ service_containers_dir }}/{{ service.name }}/volumes/{{ item }}"
+    src: "site_configs/{{ inventory_hostname }}/{{ service.name }}/etc-config/"
+    dest: "{{ service_containers_dir }}/{{ service.name }}/volumes/etc-config"
     owner: root
     group: root
-  with_items:
-    - etc-config
-    - vendor-config
+
+- name: Copy over the CaaS configuration - vendor-config
+  ansible.builtin.copy:
+    src: "site_configs/{{ inventory_hostname }}/{{ service.name }}/vendor-config/"
+    dest: "{{ service_containers_dir }}/{{ service.name }}/volumes/vendor-config"
+    owner: root
+    group: root
+  ignore_errors: true
