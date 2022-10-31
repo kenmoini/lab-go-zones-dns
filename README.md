@@ -69,4 +69,6 @@ There is at least one line of crucial configuration that is required at the end 
 include "/opt/app-root/generated-conf/config/go-zones-bootstrap.conf";
 ```
 
-The default file can be found here: [named.conf](https://github.com/kenmoini/go-zones/blob/main/container_root/opt/app-root/vendor/bind/named.conf)
+The default file can be found in the [examples](examples) directory.
+
+> You'll also need to set the `enable_vendor_overrides` to `true` when executing the `deploy.yml` Playbook
