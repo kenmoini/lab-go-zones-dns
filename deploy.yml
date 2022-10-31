@@ -48,3 +48,5 @@
         state: restarted
         enabled: yes
       loop: "{{ gozones_services }}"
+      loop_control:
+        pause: 10
