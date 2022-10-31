@@ -12,7 +12,7 @@
     - "{{ service_containers_dir }}/{{ service.name }}/volumes"
 
 - name: Template CaaS deployment files - servicectl.sh.j2
-  template:
+  ansible.builtin.template:
     src: servicectl.sh.j2
     dest: "{{ service_containers_dir }}/{{ service.name }}/scripts/servicectl.sh"
     owner: root
@@ -20,7 +20,7 @@
     mode: 0755
 
 - name: "Template CaaS deployment files - {{ service.name }}.service"
-  template:
+  ansible.builtin.template:
     src: service.j2
     dest: "/etc/systemd/system/{{ service.name }}.service"
     owner: root
@@ -28,7 +28,7 @@
     mode: 0755
 
 - name: Copy over the CaaS configuration
-  copy:
+  ansible.builtin.copy:
     src: "site_configs/{{ inventory_hostname }}/{{ service.name }}/{{ item }}/"
     dest: "{{ service_containers_dir }}/{{ service.name }}/volumes/{{ item }}"
     owner: root
