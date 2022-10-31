@@ -5,8 +5,6 @@ all:
       ansible_connection: ssh
       ansible_ssh_user: root
       ansible_ssh_private_key_file: ~/.ssh/id_rsa
-      #ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-      #ansible_python_interpreter: /usr/bin/python3
 
       # This defines the services living on the host
       gozones_services:
@@ -25,6 +23,24 @@ all:
             name: lanBridge
             ip: 192.168.42.10
             port: 53
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+
+    other-podman-host.example.com:
+      ansible_host: 10.1.2.3
+      ansible_connection: ssh
+      ansible_ssh_user: root
+      ansible_ssh_private_key_file: ~/.ssh/id_rsa
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+      ansible_python_interpreter: /usr/bin/python3
+
+      # This defines the services living on the host
+      gozones_services:
+        - name: go-zones-dns
+          network:
+            name: host
           resources:
             limits:
               cpu: 500m
