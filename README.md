@@ -4,7 +4,7 @@ This repository contains the configuration and automation to deploy GoZones DNS 
 
 [GoZones DNS](https://github.com/kenmoini/go-zones) is simply a Golang app that takes DNS defined in YAML files and generate BIND/named compliant configuration and zone files, and optionally start the server with them.
 
-In this configured form GoZones takes in a YAML definition of the DNS networks, ACLs, policies, zones, and records and then generates the configuration files for BIND - then optionally starts BIND with those generated configuration files.  There are sane defaults that make this work out of the box, however, you can override the defaults with your own configuration if you choose to do so.
+In this configured form the GoZones container takes in a YAML definition of the DNS networks, ACLs, policies, zones, and records and then generates the configuration files for BIND - then starts BIND with those generated configuration files.  There are sane defaults that make this work out of the box, however, you can override the defaults with your own configuration if you choose to do so.
 
 The configuration as represented in this repository deploys two container services (`dns-core-1`, `dns-core-2`) to a single host `raza.kemo.labs` for redundant container services that have bridged IPs on the LAN, and a single container service `zerotier-dns` on the host `nexus.kemo.network`.
 
