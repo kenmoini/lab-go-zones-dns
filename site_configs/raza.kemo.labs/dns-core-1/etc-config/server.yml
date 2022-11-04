@@ -98,9 +98,9 @@ dns:
             value: 192.168.42.12/24
           - name: idm
             value: 192.168.42.13/24
-          #- name: ntp
-          #  ttl: 6400
-          #  value: 192.168.42.14
+          - name: ntp
+            ttl: 6400
+            value: 192.168.42.14
           
           - name: step-ca
             value: 192.168.42.17/24
@@ -406,19 +406,19 @@ dns:
             priority: 0
             weight: 100
 
-          #- name: _ntp._udp
-          #  value: ntp.kemo.labs.
-          #  port: 123
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _ntp._udp
+            value: ntp.kemo.labs.
+            port: 123
+            priority: 0
+            ttl: 6400
+            weight: 100
 
-          #- name: _chrony._udp
-          #  value: ntp.kemo.labs.
-          #  port: 323
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _chrony._udp
+            value: ntp.kemo.labs.
+            port: 323
+            priority: 0
+            ttl: 6400
+            weight: 100
 
         TXT:
           - name: _kerberos
