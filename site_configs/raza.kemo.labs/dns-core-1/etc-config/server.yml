@@ -98,9 +98,9 @@ dns:
             value: 192.168.42.12/24
           - name: idm
             value: 192.168.42.13/24
-          #- name: ntp
-          #  ttl: 6400
-          #  value: 192.168.42.14
+          - name: ntp
+            ttl: 6400
+            value: 192.168.42.14
           
           - name: step-ca
             value: 192.168.42.17/24
@@ -406,19 +406,19 @@ dns:
             priority: 0
             weight: 100
 
-          #- name: _ntp._udp
-          #  value: ntp.kemo.labs.
-          #  port: 123
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _ntp._udp
+            value: ntp.kemo.labs.
+            port: 123
+            priority: 0
+            ttl: 6400
+            weight: 100
 
-          #- name: _chrony._udp
-          #  value: ntp.kemo.labs.
-          #  port: 323
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _chrony._udp
+            value: ntp.kemo.labs.
+            port: 323
+            priority: 0
+            ttl: 6400
+            weight: 100
 
         TXT:
           - name: _kerberos
@@ -559,6 +559,8 @@ dns:
             value: 192.168.42.28/24
           - name: zerotier
             value: 209.97.152.22/24
+          - name: eagle-eye
+            value: 165.227.125.134
 
           - name: can.vpn
             value: 51.161.11.55/24
