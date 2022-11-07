@@ -11,9 +11,9 @@ NETWORK_NAME="{{ service.network.name }}"
 IP_ADDRESS="{{ service.network.ip }}"
 CONTAINER_PORT="{{ service.network.port }}"
 
-VOLUME_MOUNT_ONE="{{ service_containers_dir}}/${CONTAINER_NAME}/volumes/etc-config:/etc/go-zones/"
+VOLUME_MOUNT_ONE="{{ service_containers_dir }}/${CONTAINER_NAME}/volumes/etc-config:/etc/go-zones/"
 {% if enable_vendor_overrides|bool %}
-VOLUME_MOUNT_TWO="-v {{ service_containers_dir}}/${CONTAINER_NAME}/volumes/vendor-config:/opt/app-root/vendor/bind/"
+VOLUME_MOUNT_TWO="-v {{ service_containers_dir }}/${CONTAINER_NAME}/volumes/vendor-config:/opt/app-root/vendor/bind/"
 {% endif %}
 
 CONTAINER_SOURCE="{{ container_image }}"
