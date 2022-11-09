@@ -621,6 +621,7 @@ dns:
           - name: jfrog-artifactory
             value: 192.168.70.7/24
 
+          # sno-ocp.d70.lab.kemo.network
           - name: sno-ocp
             value: 192.168.70.71
           - name: sno-white.sno-ocp
@@ -632,6 +633,7 @@ dns:
           - name: "*.apps.sno-ocp"
             value: 192.168.70.71
 
+          # core-ocp.d70.lab.kemo.network
           - name: core-ocp
             value: 192.168.70.72
           - name: api.core-ocp
@@ -641,6 +643,7 @@ dns:
           - name: "*.apps.core-ocp"
             value: 192.168.70.73
 
+          # loe-ocp.d70.lab.kemo.network
           - name: loe-ocp
             value: 192.168.70.74
           - name: api.loe-ocp
@@ -650,6 +653,7 @@ dns:
           - name: "*.apps.loe-ocp"
             value: 192.168.70.75
 
+          # vsphere-ocp.d70.lab.kemo.network
           - name: vsphere-ocp
             value: 192.168.70.76
           - name: api.vsphere-ocp
@@ -659,6 +663,7 @@ dns:
           - name: "*.apps.vsphere-ocp"
             value: 192.168.70.77
 
+          # sno-two-ocp.d70.lab.kemo.network
           - name: sno-two-ocp
             value: 192.168.70.78
           - name: yellow.sno-two-ocp
@@ -669,3 +674,25 @@ dns:
             value: 192.168.70.78
           - name: "*.apps.sno-two-ocp"
             value: 192.168.70.78
+
+          # sno.d70.lab.kemo.network
+          - name: sno
+            value: 192.168.70.79
+          - name: letit.sno
+            value: 192.168.70.79/24
+          - name: api.sno
+            value: 192.168.70.79
+          - name: api-int.sno
+            value: 192.168.70.79
+          - name: "*.apps.sno"
+            value: 192.168.70.79
+
+          # taco-bell-3node-supreme.d70.lab.kemo.network
+          - name: taco-bell-3node-supreme
+            value: 192.168.70.80
+          - name: api.taco-bell-3node-supreme
+            value: 192.168.70.80
+          - name: api-int.taco-bell-3node-supreme
+            value: 192.168.70.80
+          - name: "*.apps.taco-bell-3node-supreme"
+            value: 192.168.70.81
