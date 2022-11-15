@@ -562,6 +562,8 @@ dns:
             value: 192.168.42.28/24
           - name: zerotier
             value: 209.97.152.22/24
+          - name: tower
+            value: 192.168.42.41/24
           - name: eagle-eye
             value: 165.227.125.134
 
