@@ -291,6 +291,17 @@ dns:
           - name: "*.quay"
             value: 192.168.42.69
 
+          - name: api.mdk
+            value: 192.168.42.70
+          - name: sno.mdk
+            value: 192.168.42.70/24
+          - name: api-int.mdk
+            value: 192.168.42.70
+          - name: apps.mdk
+            value: 192.168.42.70
+          - name: "*.apps.mdk"
+            value: 192.168.42.70
+
           - name: api.core-ocp
             value: 192.168.42.76
           - name: api-int.core-ocp
