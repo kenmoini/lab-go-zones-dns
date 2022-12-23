@@ -229,12 +229,12 @@ dns:
             value: 192.168.42.49/24
           - name: rocinante
             value: 192.168.42.50/24
-          
+
           - name: gitlab
             value: 192.168.42.51/24
           - name: "*.gitlab"
             value: 192.168.42.51
-            
+
           - name: api.k8s
             value: 192.168.42.60
           - name: cp1.k8s
@@ -249,7 +249,7 @@ dns:
             value: 192.168.42.66/24
           - name: app3.k8s
             value: 192.168.42.67/24
-            
+
           - name: apps.k8s
             value: 192.168.42.68
           - name: "*.apps.k8s"
