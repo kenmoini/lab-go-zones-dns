@@ -234,39 +234,48 @@ dns:
             value: 192.168.42.51/24
           - name: "*.gitlab"
             value: 192.168.42.51
+            
+          - name: api.k8s
+            value: 192.168.42.60
+          - name: cp1.k8s
+            value: 192.168.42.61/24
+          - name: cp2.k8s
+            value: 192.168.42.62/24
+          - name: cp3.k8s
+            value: 192.168.42.63/24
+          - name: app1.k8s
+            value: 192.168.42.65/24
+          - name: app2.k8s
+            value: 192.168.42.66/24
+          - name: app3.k8s
+            value: 192.168.42.67/24
+            
+          - name: apps.k8s
+            value: 192.168.42.68
+          - name: "*.apps.k8s"
+            value: 192.168.42.68
 
   #        - name: api.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.60
   #        - name: api-int.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.60
   #        - name: lb.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.60
   #        - name: apps.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.60
   #        - name: "*.apps.ocp3"
-  #          ttl: 6400
   #          value: 192.168.42.60
   #        - name: cp-1.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.62
   #        - name: cp-2.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.63
   #        - name: cp-3.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.64
   #        - name: app-1.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.65
   #        - name: app-2.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.66
   #        - name: app-3.ocp3
-  #          ttl: 6400
   #          value: 192.168.42.67
 
           # UPI Examples
