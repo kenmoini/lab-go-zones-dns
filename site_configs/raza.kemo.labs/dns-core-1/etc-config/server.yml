@@ -236,7 +236,7 @@ dns:
             value: 192.168.42.51
 
           - name: api.k8s
-            value: 192.168.42.60
+            value: 192.168.42.61
           - name: cp1.k8s
             value: 192.168.42.61/24
           - name: cp2.k8s
