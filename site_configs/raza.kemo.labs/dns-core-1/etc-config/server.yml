@@ -100,7 +100,7 @@ dns:
             value: 192.168.42.13/24
           - name: ntp
             ttl: 6400
-            value: 192.168.42.14
+            value: 192.168.42.48
             
           - name: harbor
             value: 192.168.42.15/24
@@ -436,19 +436,19 @@ dns:
             priority: 0
             weight: 100
 
-          #- name: _ntp._udp
-          #  value: ntp.kemo.labs.
-          #  port: 123
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _ntp._udp
+            value: ntp.kemo.labs.
+            port: 123
+            priority: 0
+            ttl: 6400
+            weight: 100
 
-          #- name: _chrony._udp
-          #  value: ntp.kemo.labs.
-          #  port: 323
-          #  priority: 0
-          #  ttl: 6400
-          #  weight: 100
+          - name: _chrony._udp
+            value: ntp.kemo.labs.
+            port: 323
+            priority: 0
+            ttl: 6400
+            weight: 100
 
         TXT:
           - name: _kerberos
