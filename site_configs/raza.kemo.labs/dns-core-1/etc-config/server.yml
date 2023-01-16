@@ -173,6 +173,8 @@ dns:
             value: 192.168.42.31/24
           - name: dashy-container
             value: 192.168.42.32/24
+          - name: jfrog
+            value: 192.168.42.33/24
 
           - name: sno-two-ocp
             value: 192.168.42.34
