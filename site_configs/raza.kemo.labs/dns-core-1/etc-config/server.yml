@@ -85,6 +85,8 @@ dns:
             value: 192.168.42.5/24
           - name: RBS850
             value: 192.168.42.6/24
+          - name: uptime-kuma
+            value: 192.168.42.7/24
 
           - name: discon51pf
             value: 192.168.42.8/24
@@ -164,6 +166,8 @@ dns:
           - name: '@'
             value: 192.168.42.28
           - name: www
+            value: 192.168.42.28
+          - name: status
             value: 192.168.42.28
 
           - name: web-svcs
@@ -586,6 +590,8 @@ dns:
             anchor: 'lab.kemo.network.'
         A:
           - name: cloud
+            value: 192.168.42.28/24
+          - name: status
             value: 192.168.42.28/24
           - name: zt
             value: 192.168.42.28/24
