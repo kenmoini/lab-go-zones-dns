@@ -104,7 +104,7 @@ dns:
             ttl: 6400
             value: 192.168.42.48
             
-          - name: harbor
+          - name: pgsql
             value: 192.168.42.15/24
             
           - name: pxe
@@ -172,6 +172,8 @@ dns:
           - name: pihole-1
             value: 192.168.42.28
           - name: pihole-2
+            value: 192.168.42.28
+          - name: pgadmin
             value: 192.168.42.28
 
           - name: web-svcs
