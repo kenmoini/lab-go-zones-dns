@@ -118,8 +118,14 @@ dns:
             value: 192.168.42.19/24
           - name: plex
             value: 192.168.42.20/24
+            
           - name: microshift
             value: 192.168.42.21/24
+          - name: api.microshift
+            value: 192.168.42.21
+          - name: "*.apps.microshift"
+            value: 192.168.42.21
+            
           - name: nexus3
             value: 192.168.42.22/24
           - name: zerotier
