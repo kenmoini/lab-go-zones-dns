@@ -88,7 +88,7 @@ dns:
           - name: uptime-kuma
             value: 192.168.42.7/24
 
-          - name: discon51pf
+          - name: roon-server
             value: 192.168.42.8/24
           - name: dns-core-1
             value: 192.168.42.9/24
