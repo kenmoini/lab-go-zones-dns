@@ -230,8 +230,7 @@ dns:
             value: 192.168.42.41/24
           - name: satellite
             value: 192.168.42.42/24
-          - name: foundation
-            value: 192.168.42.43/24
+            
           - name: serenity
             value: 192.168.42.44/24
 
@@ -245,8 +244,6 @@ dns:
             value: 192.168.42.48
           - name: endurance
             value: 192.168.42.49/24
-          - name: rocinante
-            value: 192.168.42.50/24
 
           - name: gitlab
             value: 192.168.42.51/24
@@ -383,8 +380,6 @@ dns:
 
           - name: raza
             value: fdf4:e2e0:df12:a100::40
-          - name: foundation
-            value: fdf4:e2e0:df12:a100::43
           - name: serenity
             value: fdf4:e2e0:df12:a100::44
           - name: suki
@@ -395,8 +390,6 @@ dns:
             value: fdf4:e2e0:df12:a100::48
           - name: endurance
             value: fdf4:e2e0:df12:a100::49
-          - name: rocinante
-            value: fdf4:e2e0:df12:a100::50
   
           - name: dns-core-1
             value: fdf4:e2e0:df12:a100::11
@@ -681,8 +674,8 @@ dns:
             value: 192.168.42.23/24
           - name: vcenter
             value: 192.168.42.30/24
-          - name: rocinante
-            value: 192.168.42.50/24
+          - name: serenity
+            value: 192.168.42.44/24
 
 
     - name: d70-lab-kemo-network
