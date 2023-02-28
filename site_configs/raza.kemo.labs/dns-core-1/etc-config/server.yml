@@ -487,31 +487,65 @@ dns:
             domain: kemo.labs.
             anchor: '@'
         A:
+        ## Lab rack OOBM
           - name: raza
             value: 192.168.46.40/24
-          - name: foundation
-            value: 192.168.46.43/24
           - name: serenity
             value: 192.168.46.44/24
-          - name: suki
-            value: 192.168.46.46/24
           - name: endurance
             value: 192.168.46.49/24
-          - name: rocinante
-            value: 192.168.46.50/24
+        ## Office OOBM
+          - name: avalon
+            value: 192.168.46.42/24
+          - name: titan
+            value: 192.168.46.45/24
+          - name: suki
+            value: 192.168.46.46/24
+            
+        ## Lab rack PiKVM or TinyPilots
+          - name: raza.rkvm
+            value: 192.168.46.90/24
+          - name: endurance.rkvm
+            value: 192.168.46.99/24
+
+        ## Office PiKVM or TinyPilots
+          - name: kemo-win11.rkvm
+            value: 192.168.46.89/24
+          - name: avalon.rkvm
+            value: 192.168.46.92/24
+          - name: titan.rkvm
+            value: 192.168.46.95/24
+          - name: suki.rkvm
+            value: 192.168.46.96/24
+
         AAAA:
           - name: raza
             value: fdf4:e2e0:df12:a146::40
-          - name: foundation
-            value: fdf4:e2e0:df12:a146::43
           - name: serenity
             value: fdf4:e2e0:df12:a146::44
-          - name: suki
-            value: fdf4:e2e0:df12:a146::46
           - name: endurance
             value: fdf4:e2e0:df12:a146::49
-          - name: rocinante
-            value: fdf4:e2e0:df12:a146::50
+
+          - name: avalon
+            value: fdf4:e2e0:df12:a146::42
+          - name: avalon
+            value: fdf4:e2e0:df12:a146::45
+          - name: suki
+            value: fdf4:e2e0:df12:a146::46
+
+          - name: raza.rkvm
+            value: fdf4:e2e0:df12:a146::90
+          - name: endurance.rkvm
+            value: fdf4:e2e0:df12:a146::99
+
+          - name: kemo-win11.rkvm
+            value: fdf4:e2e0:df12:a146::89
+          - name: avalon.rkvm
+            value: fdf4:e2e0:df12:a146::92
+          - name: titan.rkvm
+            value: fdf4:e2e0:df12:a146::95
+          - name: suki.rkvm
+            value: fdf4:e2e0:df12:a146::96
 
     - name: d51-kemo-labs
       zone: d51.kemo.labs
