@@ -75,9 +75,9 @@ dns:
         A:
           - name: unifi
             value: 192.168.42.1/24
-          - name: us-16xg
+          - name: us-pro-agg
             value: 192.168.42.2/24
-          - name: us-48-pro
+          - name: RBS850-2
             value: 192.168.42.3/24
           - name: ap-ac-pro-1
             value: 192.168.42.4/24
@@ -230,10 +230,12 @@ dns:
             value: 192.168.42.41/24
           - name: satellite
             value: 192.168.42.42/24
-            
+          - name: avalon
+            value: 192.168.42.43/24
           - name: serenity
             value: 192.168.42.44/24
-
+          - name: titan
+            value: 192.168.42.45/24
           - name: suki
             value: 192.168.42.46/24
           - name: vroom
@@ -489,7 +491,7 @@ dns:
             value: 192.168.46.49/24
         ## Office OOBM
           - name: avalon
-            value: 192.168.46.42/24
+            value: 192.168.46.43/24
           - name: titan
             value: 192.168.46.45/24
           - name: suki
@@ -505,7 +507,7 @@ dns:
           - name: kemo-win11.rkvm
             value: 192.168.46.89/24
           - name: avalon.rkvm
-            value: 192.168.46.92/24
+            value: 192.168.46.93/24
           - name: titan.rkvm
             value: 192.168.46.95/24
           - name: suki.rkvm
@@ -521,7 +523,7 @@ dns:
 
           - name: avalon
             value: fdf4:e2e0:df12:a146::42
-          - name: avalon
+          - name: titan
             value: fdf4:e2e0:df12:a146::45
           - name: suki
             value: fdf4:e2e0:df12:a146::46
