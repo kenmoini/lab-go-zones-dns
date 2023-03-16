@@ -107,7 +107,7 @@ dns:
           - name: pgsql
             value: 192.168.42.15/24
             
-          - name: pxe
+          - name: fog
             value: 192.168.42.16/24
           
           - name: step-ca
