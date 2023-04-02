@@ -335,6 +335,17 @@ dns:
           - name: "*.apps.mdk"
             value: 192.168.42.70
 
+          - name: arm-sno-ocp
+            value: 192.168.42.75
+          - name: small.arm-sno-ocp
+            value: 192.168.42.75/24
+          - name: api.arm-sno-ocp
+            value: 192.168.42.75
+          - name: api-int.arm-sno-ocp
+            value: 192.168.42.75
+          - name: "*.apps.arm-sno-ocp"
+            value: 192.168.42.75
+
           - name: api.core-ocp
             value: 192.168.42.76
           - name: api-int.core-ocp
