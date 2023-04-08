@@ -209,7 +209,7 @@ dns:
             value: "192.168.42.36/24"
           - name: lb-vip
             value: "192.168.42.37/24"
-          - name: "*.mco-apps.kemo.labs"
+          - name: "*.mco-apps"
             value: "192.168.42.37"
 
           #- name: fcos-k8s-cp-1
