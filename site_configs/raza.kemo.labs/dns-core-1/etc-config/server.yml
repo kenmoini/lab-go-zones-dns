@@ -243,7 +243,7 @@ dns:
             value: 192.168.42.43/24
           - name: serenity
             value: 192.168.42.44/24
-          - name: titan
+          - name: maximus
             value: 192.168.42.45/24
           - name: suki
             value: 192.168.42.46/24
@@ -512,7 +512,7 @@ dns:
         ## Office OOBM
           - name: avalon
             value: 192.168.46.43/24
-          - name: titan
+          - name: maximus
             value: 192.168.46.45/24
           - name: suki
             value: 192.168.46.46/24
@@ -528,7 +528,7 @@ dns:
             value: 192.168.46.89/24
           - name: avalon.rkvm
             value: 192.168.46.93/24
-          - name: titan.rkvm
+          - name: maximus.rkvm
             value: 192.168.46.95/24
           - name: suki.rkvm
             value: 192.168.46.96/24
@@ -543,7 +543,7 @@ dns:
 
           - name: avalon
             value: fdf4:e2e0:df12:a146::42
-          - name: titan
+          - name: maximus
             value: fdf4:e2e0:df12:a146::45
           - name: suki
             value: fdf4:e2e0:df12:a146::46
@@ -557,7 +557,7 @@ dns:
             value: fdf4:e2e0:df12:a146::89
           - name: avalon.rkvm
             value: fdf4:e2e0:df12:a146::92
-          - name: titan.rkvm
+          - name: maximus.rkvm
             value: fdf4:e2e0:df12:a146::95
           - name: suki.rkvm
             value: fdf4:e2e0:df12:a146::96
