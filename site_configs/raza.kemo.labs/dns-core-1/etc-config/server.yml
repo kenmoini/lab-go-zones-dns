@@ -699,6 +699,11 @@ dns:
           - name: serenity
             value: 192.168.42.44/24
 
+          - name: gitlab
+            value: 192.168.42.28
+          - name: "*.gitlab"
+            value: 192.168.42.28
+
 
     - name: d70-lab-kemo-network
       zone: d70.lab.kemo.network
