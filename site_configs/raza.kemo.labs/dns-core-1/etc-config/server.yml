@@ -667,6 +667,9 @@ dns:
             value: 51.161.11.55/24
           - name: can-ca.vpn
             value: 51.161.11.55/24
+            
+          - name: ansible
+            value: 192.168.42.77
 
     - name: lab-kemo-network
       zone: lab.kemo.network
