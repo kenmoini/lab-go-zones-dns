@@ -153,6 +153,8 @@ dns:
             value: 192.168.42.28
           - name: jackett
             value: 192.168.42.28
+          - name: sabnzbd
+            value: 192.168.42.28
           - name: deluge-web
             value: 192.168.42.28
           - name: nexus
