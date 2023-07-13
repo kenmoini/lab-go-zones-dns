@@ -661,7 +661,7 @@ dns:
           - name: zerotier
             value: 209.97.152.22/24
           - name: tower
-            value: 108.244.150.65
+            value: 45.20.209.194
           - name: eagle-eye
             value: 165.227.125.134
 
