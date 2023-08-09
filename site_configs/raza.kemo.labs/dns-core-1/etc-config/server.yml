@@ -43,6 +43,9 @@ dns:
         - zone: dsal.labs
           forwarders:
             - 10.1.241.136
+        - zone: vdom.local
+          forwarders:
+            - 192.168.42.38
       # zones is a list of named Zones to associate with this view
       zones:
         - kemo-labs
@@ -213,6 +216,8 @@ dns:
             value: "192.168.42.37/24"
           - name: "*.mco-apps"
             value: "192.168.42.37"
+          - name: winsrv
+            value: "192.168.42.38/24"
 
           #- name: fcos-k8s-cp-1
           #  value: 192.168.42.31
