@@ -143,7 +143,7 @@ dns:
             value: 192.168.42.27/24
 
           - name: hello.test
-            value: 192.168.70.13
+            value: 192.168.70.11
 
           - name: ingress
             value: 192.168.42.28
