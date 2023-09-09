@@ -749,6 +749,16 @@ dns:
           - name: "*.apps.sno-ocp"
             value: 192.168.70.71
 
+          # mega-sno.d70.lab.kemo.network
+          - name: mega-sno
+            value: 192.168.70.70/24
+          - name: api.mega-sno
+            value: 192.168.70.70
+          - name: api-int.mega-sno
+            value: 192.168.70.70
+          - name: "*.apps.mega-sno"
+            value: 192.168.70.70
+
           # core-ocp.d70.lab.kemo.network
           - name: core-ocp
             value: 192.168.70.72
