@@ -46,6 +46,9 @@ dns:
         - zone: vdom.local
           forwarders:
             - 192.168.42.38
+        - zone: me.kemo.labs
+          forwarders:
+            - 192.168.99.10
       # zones is a list of named Zones to associate with this view
       zones:
         - kemo-labs
